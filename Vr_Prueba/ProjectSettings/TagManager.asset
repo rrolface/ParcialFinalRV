@@ -12,6 +12,8 @@ TagManager:
   - HemostaticaCurva
   - Jeringa
   - Bisturi
+  - Mascara
+  - GuanteIzq
   layers:
   - Default
   - TransparentFX
