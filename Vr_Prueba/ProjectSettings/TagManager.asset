@@ -8,6 +8,10 @@ TagManager:
   - TijeraQuirurgica
   - Panuelo
   - PinzaAnatomica
+  - HemostaticaRecta
+  - HemostaticaCurva
+  - Jeringa
+  - Bisturi
   layers:
   - Default
   - TransparentFX

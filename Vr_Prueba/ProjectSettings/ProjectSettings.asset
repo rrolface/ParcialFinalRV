@@ -162,7 +162,8 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.DefaultCompany.Vr-Prueba
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -777,8 +778,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Vr_Prueba
-  metroPackageVersion: 
+  metroPackageName: VrPrueba
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -786,7 +787,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Vr_Prueba
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Vr_Prueba
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
