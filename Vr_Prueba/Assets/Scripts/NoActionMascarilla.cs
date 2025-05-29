@@ -6,6 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class NoActionMascarilla : XRSocketInteractor
 {
     public string targetTag;
+    [SerializeField] private Material newMaterial;  // Nuevo material a aplicar
+    [SerializeField] private GameObject objectToChangeMaterial;  // Objeto cuyo material 
 
     protected override void OnEnable()
     {
@@ -40,6 +42,20 @@ public class NoActionMascarilla : XRSocketInteractor
         {
             // Desactiva el objeto al insertarse
             args.interactableObject.transform.gameObject.SetActive(false);
+
+            // Cambia el material del objeto target
+            if (objectToChangeMaterial != null && newMaterial != null)
+            {
+                var renderer = objectToChangeMaterial.GetComponent<Renderer>();
+                if (renderer != null)
+                {
+                    renderer.material = newMaterial;
+                }
+                else
+                {
+                    Debug.LogWarning("No se encontró Renderer en objectToChangeMaterial");
+                }
+            }
         }
     }
 

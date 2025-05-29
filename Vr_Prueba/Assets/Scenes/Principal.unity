@@ -1308,6 +1308,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.986215, y: 0.15262204, z: 0.41057}
   m_Center: {x: 0.14181371, y: 0.06631101, z: 0.09069089}
+--- !u!1 &159190794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 109434732395284511, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
+  m_PrefabInstance: {fileID: 838867383}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &163846624
 GameObject:
   m_ObjectHideFlags: 0
@@ -5266,27 +5271,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c3c7a7f66eacbd40a215f6a78b93bf4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70007634
+      value: 0.6755821
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c3c7a7f66eacbd40a215f6a78b93bf4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.099464156
+      value: 0.003301557
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c3c7a7f66eacbd40a215f6a78b93bf4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.70007634
+      value: -0.7372686
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c3c7a7f66eacbd40a215f6a78b93bf4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.099464186
+      value: 0.0036030177
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c3c7a7f66eacbd40a215f6a78b93bf4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -16.173
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c3c7a7f66eacbd40a215f6a78b93bf4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: -95
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c3c7a7f66eacbd40a215f6a78b93bf4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -5299,7 +5304,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 3c3c7a7f66eacbd40a215f6a78b93bf4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 32b72d98a07b83e4090bbc68305257d6, type: 2}
+      objectReference: {fileID: 2100000, guid: 97baefbfba3702249a1e7324f4f2f68b, type: 2}
     - target: {fileID: 919132149155446097, guid: 3c3c7a7f66eacbd40a215f6a78b93bf4, type: 3}
       propertyPath: m_Name
       value: guantes
@@ -5417,6 +5422,8 @@ MonoBehaviour:
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   targetTag: GuanteDer
+  newMaterial: {fileID: 2100000, guid: 97baefbfba3702249a1e7324f4f2f68b, type: 2}
+  objectToChangeMaterial: {fileID: 737716287}
 --- !u!65 &728400769
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5469,6 +5476,11 @@ Rigidbody:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 67532d0515e6e924ab9632fd97470442, type: 3}
   m_PrefabInstance: {fileID: 1554537703}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &737716287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5686134208185362928, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
+  m_PrefabInstance: {fileID: 2092975328}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &739613766
 PrefabInstance:
@@ -6196,13 +6208,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800880482}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.082, y: 0, z: 0.011}
+  m_LocalRotation: {x: 0.03725912, y: 0.7900785, z: 0.028823102, w: 0.611193}
+  m_LocalPosition: {x: -0.0858, y: -0, z: 0.0061}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1516047566}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 104.55, z: 5.4}
 --- !u!114 &800880484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6264,6 +6276,8 @@ MonoBehaviour:
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   targetTag: GuanteIzq
+  newMaterial: {fileID: 2100000, guid: 97baefbfba3702249a1e7324f4f2f68b, type: 2}
+  objectToChangeMaterial: {fileID: 159190794}
 --- !u!65 &800880485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6443,6 +6457,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1516047566}
     m_Modifications:
+    - target: {fileID: 109434732392105323, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bd3600dcbb3e1a6489662fea3f981aac, type: 2}
     - target: {fileID: 109434732395284509, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
       propertyPath: m_Name
       value: Left Hand Model
@@ -9525,7 +9543,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 3c3c7a7f66eacbd40a215f6a78b93bf4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 32b72d98a07b83e4090bbc68305257d6, type: 2}
+      objectReference: {fileID: 2100000, guid: 97baefbfba3702249a1e7324f4f2f68b, type: 2}
     - target: {fileID: 919132149155446097, guid: 3c3c7a7f66eacbd40a215f6a78b93bf4, type: 3}
       propertyPath: m_Name
       value: guantes (1)
@@ -17682,6 +17700,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: ManoDerecha
       objectReference: {fileID: 0}
+    - target: {fileID: 5686134208196863108, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bd3600dcbb3e1a6489662fea3f981aac, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
