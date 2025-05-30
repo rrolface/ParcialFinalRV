@@ -6,26 +6,24 @@ public class MascaraPuesta : MonoBehaviour
 {
 
     public bool mascaraPuesta = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public AudioSource audiosource;
 
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Mascara"))
         {
-            mascaraPuesta=true;
-            Debug.Log("mascara Puesta");
+            if(!mascaraPuesta)
+            {
+                mascaraPuesta = true;
+                Debug.Log("mascara Puesta");
+
+                if(audiosource != null  && !audiosource.isPlaying)
+                {
+                    audiosource.Play();
+                }
+            }
+        
         }
     }
 

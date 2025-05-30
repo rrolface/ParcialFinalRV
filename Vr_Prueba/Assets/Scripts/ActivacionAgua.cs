@@ -6,6 +6,7 @@ using UnityEngine.XR.Content.Interaction;
 public class ActivacionAgua : MonoBehaviour
 {
     public Animator aguaAnimator;
+    public AudioSource aguaAudioSource;
 
     public void AbrirAgua()
     {
@@ -13,6 +14,11 @@ public class ActivacionAgua : MonoBehaviour
         {
             aguaAnimator.Play("Agua_caer");
             Debug.Log("Agua abierta");
+
+            if (aguaAudioSource != null && !aguaAudioSource.isPlaying)
+            {
+                aguaAudioSource.Play();
+            }
         }
     }
 
@@ -22,6 +28,11 @@ public class ActivacionAgua : MonoBehaviour
         {
             aguaAnimator.Play("Agua_cerrar");
             Debug.Log("Agua cerrada");
+
+            if (aguaAudioSource != null && aguaAudioSource.isPlaying)
+            {
+                aguaAudioSource.Stop();
+            }
         }
     }
 }
