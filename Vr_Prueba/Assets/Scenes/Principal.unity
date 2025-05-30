@@ -860,6 +860,123 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 459340, guid: f531eff400a90054dbf121fa394b2965, type: 3}
   m_PrefabInstance: {fileID: 78549742}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &89510870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 89510871}
+  - component: {fileID: 89510872}
+  - component: {fileID: 89510873}
+  - component: {fileID: 89510874}
+  m_Layer: 0
+  m_Name: DetectorObjetos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &89510871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89510870}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.643, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 476729804}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &89510872
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89510870}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.41, z: 1.42}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &89510873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89510870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd4e479931f44a440898e0972dc755e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socketBandeja: {fileID: 2124882064}
+  socketTrapo: {fileID: 795572072}
+  socketTijeraQuirirjica: {fileID: 2069944535}
+  socketPinzaAnatomica: {fileID: 1108195353}
+  "SocketPinzaHemost\xE1ticacurva": {fileID: 140813158}
+  "SocketPinzaHemost\xE1ticaRecta": {fileID: 1716821317}
+  SocketJeringa: {fileID: 892437713}
+  SocketBisturi: {fileID: 1742667030}
+  tagsHerramientasValidas:
+  - Bandeja
+  - Trapo
+  - HemostaticaRecta
+  - HemostaticaCurva
+  - Jeringa
+  - PinzaAnatomica
+  - TijeraQuirurgica
+  - Bisturi
+  totalHerramientasEsperadas: 8
+  bandejaGO: {fileID: 1677772384}
+  trapoGO: {fileID: 1218998808}
+  intentosMalos: 0
+  herramientasCorrectasColocadas: 0
+  fasePreparacionCompleta: 0
+--- !u!54 &89510874
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89510870}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &101919971
 GameObject:
   m_ObjectHideFlags: 0
@@ -2965,6 +3082,7 @@ Transform:
   - {fileID: 892437714}
   - {fileID: 1742667031}
   - {fileID: 795572073}
+  - {fileID: 89510871}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &485969472
@@ -4952,6 +5070,14 @@ PrefabInstance:
       propertyPath: m_OnLeverDeactivate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6140369516414695376, guid: 36eff8b49ecdca745894efb1d2ce5f8f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654639296805311464, guid: 36eff8b49ecdca745894efb1d2ce5f8f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7459442142708147920, guid: 36eff8b49ecdca745894efb1d2ce5f8f, type: 3}
       propertyPath: m_Name
       value: Lever
@@ -5424,6 +5550,7 @@ MonoBehaviour:
   targetTag: GuanteDer
   newMaterial: {fileID: 2100000, guid: 97baefbfba3702249a1e7324f4f2f68b, type: 2}
   objectToChangeMaterial: {fileID: 737716287}
+  accionRealizada: 0
 --- !u!65 &728400769
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6278,6 +6405,7 @@ MonoBehaviour:
   targetTag: GuanteIzq
   newMaterial: {fileID: 2100000, guid: 97baefbfba3702249a1e7324f4f2f68b, type: 2}
   objectToChangeMaterial: {fileID: 159190794}
+  accionRealizada: 0
 --- !u!65 &800880485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6848,7 +6976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166404037579954430, guid: f20e77cf5f74328498156309bd3fda37, type: 3}
       propertyPath: m_TagString
-      value: Panuelo
+      value: Trapo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
