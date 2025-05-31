@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+
 
 public class ManajerFase2 : MonoBehaviour
 {
@@ -14,8 +16,13 @@ public class ManajerFase2 : MonoBehaviour
     private bool fase2Completada = false;
     private bool animacionEnCurso = false;
 
+    public GameObject PanelResumen;
+    public GameObject PanelFase2;
+
     [Header("Dependencia de Fase 1")]
     public ManagerFase1 managerFase1;
+
+    public TextMeshProUGUI PointsFase2;
 
     void Start()
     {
@@ -81,6 +88,9 @@ public class ManajerFase2 : MonoBehaviour
             fase2Completada = true;
             doctorAnimator.Play("Breathing Idle");
             Debug.Log("🎉 Fase 2 completada. Puntos finales: " + puntosFase2);
+            PointsFase2.text = "" + puntosFase2;
+            PanelResumen.SetActive(true);
+            PanelFase2.SetActive(false);
         }
         else
         {

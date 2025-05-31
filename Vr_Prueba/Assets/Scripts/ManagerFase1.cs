@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ManagerFase1 : MonoBehaviour
@@ -15,16 +16,23 @@ public class ManagerFase1 : MonoBehaviour
     public int puntosFase1 = 50;
     public bool faseEvaluada = false;
 
+    public GameObject PanelAparecer;
+    public GameObject PanelOcultar;
+
+    public TextMeshProUGUI PointsFase1;
+
     void Update()
     {
         if (!faseEvaluada && managerPreparacion.fasePreparacionCompleta)
         {
             EvaluarFase1();
             faseEvaluada = true;
+            PanelAparecer.SetActive(true);
+            PanelOcultar.SetActive(false);
 
             // Aquí puedes activar la Fase 2 o enviar evento, etc.
             Debug.Log("✅ Fase 1 finalizada con " + puntosFase1 + " puntos.");
-        }
+            PointsFase1.text = "" + puntosFase1;
     }
 
     void EvaluarFase1()
