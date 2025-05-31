@@ -16,19 +16,31 @@ public class PlayOnGrab : MonoBehaviour
         grabInteractable = GetComponent<XRGrabInteractable>();
         audioSource = GetComponent<AudioSource>();
 
-        // Nos suscribimos al evento SelectEntered (inicio de agarre)
         grabInteractable.selectEntered.AddListener(OnGrab);
+        grabInteractable.selectExited.AddListener(OnRelease);
     }
 
     private void OnDestroy()
     {
-        // Limpiar suscripciones
         grabInteractable.selectEntered.RemoveListener(OnGrab);
+        grabInteractable.selectExited.RemoveListener(OnRelease);
     }
 
     private void OnGrab(SelectEnterEventArgs args)
     {
         if (grabClip != null)
-            audioSource.PlayOneShot(grabClip);
+        {
+            audioSource.clip = grabClip;
+            audioSource.loop = false; // Asegúrate que no haga loop
+            audioSource.Play();
+        }
+    }
+
+    private void OnRelease(SelectExitEventArgs args)
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop(); // Detener el sonido inmediatamente
+        }
     }
 }
