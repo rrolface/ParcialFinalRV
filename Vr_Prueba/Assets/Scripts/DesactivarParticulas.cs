@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class DesactivarParticulas : MonoBehaviour
 {
-    public ParticleSystem particulas;
+    public GameObject particulas;
+    public GameObject panelrevisa;
+  
 
     private void OnTriggerEnter(Collider other)
     {
         // Verificamos si el que entró es el Player (por tag)
-        if (other.CompareTag("Untagged"))
+        if (other.CompareTag("ManoDerecha"))
         {
-            if (particulas != null && particulas.isPlaying)
-            {
-                particulas.Stop(); // Detiene la emisión de partículas
+          
+                particulas.SetActive(false); // Detiene la emisión de partículas
+            panelrevisa.SetActive(false);
+            
                 Debug.Log("Partículas desactivadas porque el Player entró al área.");
-            }
+
+            
         }
     }
 }

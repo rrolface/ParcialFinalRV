@@ -33,42 +33,43 @@ public class ManagerFase1 : MonoBehaviour
             // Aquí puedes activar la Fase 2 o enviar evento, etc.
             Debug.Log("✅ Fase 1 finalizada con " + puntosFase1 + " puntos.");
             PointsFase1.text = "" + puntosFase1;
-    }
-
-    void EvaluarFase1()
-    {
-        if (!agarraScript.Agarro)
-        {
-            puntosFase1 -= 10;
-            Debug.Log("❌ No agarró: -10 puntos");
         }
 
-        if (!lavadoManosScript.lavadoManos)
+        void EvaluarFase1()
         {
-            puntosFase1 -= 10;
-            Debug.Log("❌ No se lavó las manos: -10 puntos");
+            if (!agarraScript.Agarro)
+            {
+                puntosFase1 -= 10;
+                Debug.Log("❌ No agarró: -10 puntos");
+            }
+
+            if (!lavadoManosScript.lavadoManos)
+            {
+                puntosFase1 -= 10;
+                Debug.Log("❌ No se lavó las manos: -10 puntos");
+            }
+
+            if (!mascaraPuestaScript.mascaraPuesta)
+            {
+                puntosFase1 -= 10;
+                Debug.Log("❌ No se puso la mascarilla: -10 puntos");
+            }
+
+            if (!accionMascarillaScript.accionRealizada)
+            {
+                puntosFase1 -= 10;
+                Debug.Log("❌ No realizó la acción de mascarilla: -10 puntos");
+            }
+
+            int penalizacionIntentos = managerPreparacion.intentosMalos * 5;
+            puntosFase1 -= penalizacionIntentos;
+
+            if (penalizacionIntentos > 0)
+            {
+                Debug.Log("❌ Intentos malos: -" + penalizacionIntentos + " puntos (" + managerPreparacion.intentosMalos + " intentos)");
+            }
+
+            puntosFase1 = Mathf.Max(0, puntosFase1); // Asegurarse de no tener puntos negativos
         }
-
-        if (!mascaraPuestaScript.mascaraPuesta)
-        {
-            puntosFase1 -= 10;
-            Debug.Log("❌ No se puso la mascarilla: -10 puntos");
-        }
-
-        if (!accionMascarillaScript.accionRealizada)
-        {
-            puntosFase1 -= 10;
-            Debug.Log("❌ No realizó la acción de mascarilla: -10 puntos");
-        }
-
-        int penalizacionIntentos = managerPreparacion.intentosMalos * 5;
-        puntosFase1 -= penalizacionIntentos;
-
-        if (penalizacionIntentos > 0)
-        {
-            Debug.Log("❌ Intentos malos: -" + penalizacionIntentos + " puntos (" + managerPreparacion.intentosMalos + " intentos)");
-        }
-
-        puntosFase1 = Mathf.Max(0, puntosFase1); // Asegurarse de no tener puntos negativos
     }
 }

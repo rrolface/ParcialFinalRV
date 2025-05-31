@@ -18,6 +18,7 @@ TagManager:
   - ManoDerecha
   - ManoIzquierda
   - ObjetoMalo
+  - particulas
   layers:
   - Default
   - TransparentFX
