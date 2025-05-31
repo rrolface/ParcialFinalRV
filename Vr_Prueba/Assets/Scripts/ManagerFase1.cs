@@ -20,6 +20,11 @@ public class ManagerFase1 : MonoBehaviour
     public GameObject PanelOcultar;
 
     public TextMeshProUGUI PointsFase1;
+    public TextMeshProUGUI mal1;
+    public TextMeshProUGUI mal2;
+    public TextMeshProUGUI mal3;
+    public TextMeshProUGUI mal4;
+    public TextMeshProUGUI mal5;
 
     void Update()
     {
@@ -32,7 +37,7 @@ public class ManagerFase1 : MonoBehaviour
 
             // Aquí puedes activar la Fase 2 o enviar evento, etc.
             Debug.Log("✅ Fase 1 finalizada con " + puntosFase1 + " puntos.");
-            PointsFase1.text = "" + puntosFase1;
+            PointsFase1.text = "" + puntosFase1 + "de 50";
         }
 
         void EvaluarFase1()
@@ -41,24 +46,27 @@ public class ManagerFase1 : MonoBehaviour
             {
                 puntosFase1 -= 10;
                 Debug.Log("❌ No agarró: -10 puntos");
+                mal1.text = "❌ No agarró tabla: -10 puntos";
             }
 
             if (!lavadoManosScript.lavadoManos)
             {
                 puntosFase1 -= 10;
                 Debug.Log("❌ No se lavó las manos: -10 puntos");
+                mal2.text = "❌ No se lavó las manos: -10 puntos";
             }
 
             if (!mascaraPuestaScript.mascaraPuesta)
             {
                 puntosFase1 -= 10;
-                Debug.Log("❌ No se puso la mascarilla: -10 puntos");
+                mal3.text=("❌ No se puso la mascarilla: -10 puntos");
+
             }
 
             if (!accionMascarillaScript.accionRealizada)
             {
                 puntosFase1 -= 10;
-                Debug.Log("❌ No realizó la acción de mascarilla: -10 puntos");
+                 mal4.text = ("❌ No se puso guantes: -10 puntos");
             }
 
             int penalizacionIntentos = managerPreparacion.intentosMalos * 5;
@@ -67,6 +75,7 @@ public class ManagerFase1 : MonoBehaviour
             if (penalizacionIntentos > 0)
             {
                 Debug.Log("❌ Intentos malos: -" + penalizacionIntentos + " puntos (" + managerPreparacion.intentosMalos + " intentos)");
+                mal5.text = "❌ Herramientas malas:" + managerPreparacion.intentosMalos + "\n" + penalizacionIntentos + "puntos";
             }
 
             puntosFase1 = Mathf.Max(0, puntosFase1); // Asegurarse de no tener puntos negativos
