@@ -87,7 +87,7 @@ public class ManagerPreparacion : MonoBehaviour
         }
 
         // Finalizar fase
-        if (herramientasCorrectasColocadas >= totalHerramientasEsperadas && !fasePreparacionCompleta)
+        if (herramientasCorrectasColocadas >= totalHerramientasEsperadas)
         {
             fasePreparacionCompleta = true;
             Debug.Log("🎉 Fase de preparación completa.");
@@ -141,6 +141,12 @@ public class ManagerPreparacion : MonoBehaviour
     {
         var grab = bandejaGO.GetComponent<XRGrabInteractable>();
         if (grab != null) grab.enabled = false;
-        Debug.Log("🔒 Bandeja bloqueada.");
+
+        var rb = bandejaGO.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+            rb.useGravity = false;
+        }
     }
 }

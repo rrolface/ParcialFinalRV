@@ -13,7 +13,7 @@ public class ManagerFase1 : MonoBehaviour
 
     [Header("Puntaje de la Fase 1")]
     public int puntosFase1 = 50;
-    private bool faseEvaluada = false;
+    public bool faseEvaluada = false;
 
     void Update()
     {
