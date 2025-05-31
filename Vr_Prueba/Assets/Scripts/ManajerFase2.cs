@@ -18,6 +18,7 @@ public class ManajerFase2 : MonoBehaviour
 
     public GameObject PanelResumen;
     public GameObject PanelFase2;
+    public GameObject PanelHistorialMedico;
 
     [Header("Dependencia de Fase 1")]
     public ManagerFase1 managerFase1;
@@ -91,6 +92,7 @@ public class ManajerFase2 : MonoBehaviour
             PointsFase2.text = "" + puntosFase2;
             PanelResumen.SetActive(true);
             PanelFase2.SetActive(false);
+            PanelHistorialMedico.SetActive(false); 
         }
         else
         {
